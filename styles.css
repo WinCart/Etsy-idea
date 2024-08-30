@@ -1,0 +1,368 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f4f8; /* Light Gray */
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #004d40; /* Teal Blue */
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo {
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Hero Section */
+.hero {
+    background: #b2dfdb; /* Light Blue */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero .countdown p {
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.hero .cta-button {
+    background: #004d40; /* Teal Blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Introduction Section */
+.introduction {
+    background: #e0f2f1; /* Light Blue */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.introduction .cta-button {
+    background: #004d40; /* Teal Blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* What Is It Section */
+.what-is-it {
+    padding: 40px 0;
+}
+
+.what-is-it .image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.what-is-it .image-text img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.what-is-it .text {
+    max-width: 600px;
+}
+
+.what-is-it h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.what-is-it p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Why Do You Need It Section */
+.why-do-you-need-it {
+    background: #e0f2f1; /* Light Blue */
+    padding: 40px 0;
+}
+
+.why-do-you-need-it .image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.why-do-you-need-it .info-image {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.why-do-you-need-it .text {
+    max-width: 600px;
+}
+
+.why-do-you-need-it h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.why-do-you-need-it p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Who Is This For Section */
+.who-is-this-for {
+    padding: 40px 0;
+}
+
+.who-is-this-for .image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.who-is-this-for .info-image {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.who-is-this-for .text {
+    max-width: 600px;
+}
+
+.who-is-this-for h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.who-is-this-for p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Bonuses Section */
+.bonuses {
+    background: #b2dfdb; /* Light Blue */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.bonuses h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.bonuses ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bonuses ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.bonuses .cta-button {
+    background: #004d40; /* Teal Blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonials .testimonial {
+    background: #ffffff; /* White */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.testimonials .testimonial p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonials .testimonial span {
+    display: block;
+    font-style: italic;
+}
+
+/* About Section */
+.about {
+    background: #e0f2f1; /* Light Blue */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #004d40; /* Teal Blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-text img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-text .text {
+        max-width: 100%;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero .countdown {
+        flex-direction: column;
+    }
+
+    .hero .countdown p {
+        margin-bottom: 10px;
+    }
+
+    .testimonial-grid {
+        flex-direction: column;
+    }
+}
