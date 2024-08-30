@@ -24,36 +24,31 @@ header {
     background: #004d40; /* Teal Blue */
     color: #fff;
     padding: 10px 0;
+    position: relative;
 }
 
 header .logo {
-    float: left;
     font-size: 1.5em;
     font-weight: bold;
 }
 
 header nav {
-    float: right;
+    margin-top: 10px;
 }
 
 header nav ul {
     list-style: none;
+    text-align: center;
 }
 
 header nav ul li {
-    display: inline;
-    margin-left: 20px;
+    display: inline-block;
+    margin: 10px 20px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
 }
 
 /* Hero Section */
@@ -64,7 +59,7 @@ header::after {
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
@@ -77,10 +72,12 @@ header::after {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero .countdown p {
-    margin: 0 10px;
+    margin: 10px 0;
     font-size: 1.5em;
 }
 
@@ -100,7 +97,7 @@ header::after {
 }
 
 .introduction h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -125,21 +122,22 @@ header::after {
 .what-is-it .image-text {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .what-is-it .image-text img {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .what-is-it .text {
-    max-width: 600px;
+    text-align: center;
 }
 
 .what-is-it h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -157,21 +155,22 @@ header::after {
 .why-do-you-need-it .image-text {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column-reverse;
 }
 
 .why-do-you-need-it .info-image {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .why-do-you-need-it .text {
-    max-width: 600px;
+    text-align: center;
 }
 
 .why-do-you-need-it h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -188,21 +187,22 @@ header::after {
 .who-is-this-for .image-text {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .who-is-this-for .info-image {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .who-is-this-for .text {
-    max-width: 600px;
+    text-align: center;
 }
 
 .who-is-this-for h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -219,7 +219,7 @@ header::after {
 }
 
 .bonuses h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -248,7 +248,7 @@ header::after {
 
 .testimonials h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -263,7 +263,7 @@ header::after {
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
-    max-width: 300px;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -285,13 +285,14 @@ header::after {
 }
 
 .about h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
 .about p {
     font-size: 1.2em;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Footer */
@@ -331,22 +332,8 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .image-text {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .image-text img {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .image-text .text {
-        max-width: 100%;
-    }
-
-    header nav ul {
-        text-align: center;
+    .container {
+        width: 90%;
     }
 
     header nav ul li {
@@ -354,15 +341,21 @@ footer {
         margin: 10px 0;
     }
 
-    .hero .countdown {
-        flex-direction: column;
+    .hero h1 {
+        font-size: 1.8em;
     }
 
-    .hero .countdown p {
-        margin-bottom: 10px;
+    .hero p {
+        font-size: 1em;
     }
 
-    .testimonial-grid {
-        flex-direction: column;
+    .introduction h2,
+    .what-is-it h2,
+    .why-do-you-need-it h2,
+    .who-is-this-for h2,
+    .bonuses h2,
+    .testimonials h2,
+    .about h2 {
+        font-size: 1.6em;
     }
 }
