@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #F4F4F9; /* Light Gray Background */
+    background-color: #F5F5F5; /* Light Gray Background */
 }
 
 /* Container */
@@ -21,19 +21,29 @@ body {
 
 /* Header */
 header {
-    background: #3A6D81; /* Teal Blue */
+    background: linear-gradient(90deg, #003366 0%, #0066cc 100%); /* Navy Blue to Sky Blue */
     color: #fff;
-    padding: 10px 20px;
-    position: relative;
+    padding: 10px 30px;
+    position: fixed; /* Sticky header */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: padding 0.3s ease;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Increased logo size */
     font-weight: bold;
+    transition: transform 0.3s ease; /* Added hover effect for logo */
+}
+
+header .logo:hover {
+    transform: scale(1.1); /* Slightly increases logo size on hover */
 }
 
 header nav {
@@ -54,11 +64,13 @@ header nav ul.nav-links li {
 header nav ul.nav-links li a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 header nav ul.nav-links li a:hover {
-    color: #B0D8E8; /* Light Blue on hover */
+    color: #00bfff; /* Deep Sky Blue color on hover */
+    border-bottom: 2px solid #00bfff; /* Adds a bottom border on hover */
+    padding-bottom: 2px;
 }
 
 /* Menu Icon for Mobile View */
@@ -80,7 +92,7 @@ header nav ul.nav-links li a:hover {
     display: none;
     position: absolute;
     right: 20px;
-    background-color: #3A6D81; /* Teal Blue */
+    background-color: #003366; /* Navy Blue */
     width: 100%;
     top: 60px;
     text-align: center;
@@ -107,7 +119,7 @@ header nav ul.nav-links li a:hover {
 }
 
 .dropdown-menu ul li a:hover {
-    background-color: #B0D8E8; /* Light Blue on hover */
+    background-color: #0066cc; /* Sky Blue on hover */
 }
 
 /* Show the dropdown menu when toggled */
@@ -117,10 +129,11 @@ header nav ul.nav-links li a:hover {
 
 /* Hero Section */
 .hero {
-    background: #1E4F63; /* Dark Teal Blue */
+    background: linear-gradient(135deg, #003366 0%, #0066cc 100%); /* Navy Blue to Sky Blue */
     color: #fff;
-    padding: 40px 0;
+    padding: 80px 0;
     text-align: center;
+    animation: fadeInUp 1s ease-in-out; /* Fade in effect */
 }
 
 .hero h1 {
@@ -142,26 +155,29 @@ header nav ul.nav-links li a:hover {
 .hero .countdown p {
     margin: 0 10px;
     font-size: 1.5em;
+    animation: pulse 1.5s infinite; /* Pulse effect */
 }
 
 .hero .cta-button {
-    background: #F4B942; /* Warm Gold */
+    background: #0066cc; /* Sky Blue */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Rounded button shape */
     transition: background-color 0.3s ease;
+    animation: sizeBlink 1s infinite; /* Blinking animation */
 }
 
 .hero .cta-button:hover {
-    background: #E3A233; /* Slightly darker gold for hover effect */
+    background: #005bb5; /* Darker Blue for hover effect */
 }
 
 /* Introduction Section */
 .introduction {
-    background: #B0D8E8; /* Light Blue */
+    background: linear-gradient(90deg, #f0f0f0 0%, #d0d0d0 100%); /* Light Gray to Silver */
     padding: 40px 0;
     text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Fade in effect */
 }
 
 .introduction h2 {
@@ -175,21 +191,23 @@ header nav ul.nav-links li a:hover {
 }
 
 .introduction .cta-button {
-    background: #F4B942; /* Warm Gold */
+    background: #0066cc; /* Sky Blue */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Rounded button shape */
     transition: background-color 0.3s ease;
+    animation: sizeBlink 1s infinite; /* Blinking animation */
 }
 
 .introduction .cta-button:hover {
-    background: #E3A233; /* Slightly darker gold for hover effect */
+    background: #005bb5; /* Darker Blue for hover effect */
 }
 
 /* What Is It Section */
 .what-is-it {
     padding: 40px 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .what-is-it .image-text {
@@ -221,8 +239,9 @@ header nav ul.nav-links li a:hover {
 
 /* Why Do You Need It Section */
 .why-do-you-need-it {
-    background: #B0D8E8; /* Light Blue */
+    background: #e6e6e6; /* Light Gray */
     padding: 40px 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .why-do-you-need-it .image-text {
@@ -255,6 +274,7 @@ header nav ul.nav-links li a:hover {
 /* Who Is This For Section */
 .who-is-this-for {
     padding: 40px 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .who-is-this-for .image-text {
@@ -286,9 +306,10 @@ header nav ul.nav-links li a:hover {
 
 /* Bonuses Section */
 .bonuses {
-    background: #F4B942; /* Warm Gold */
+    background: linear-gradient(135deg, #0066cc 0%, #005bb5 100%); /* Sky Blue to Dark Blue */
     padding: 40px 0;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .bonuses h2 {
@@ -307,21 +328,23 @@ header nav ul.nav-links li a:hover {
 }
 
 .bonuses .cta-button {
-    background: #1E4F63; /* Dark Teal Blue */
+    background: #0066cc; /* Sky Blue */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Rounded button shape */
     transition: background-color 0.3s ease;
+    animation: sizeBlink 1s infinite; /* Blinking animation */
 }
 
 .bonuses .cta-button:hover {
-    background: #0F3B4C; /* Darker Teal Blue for hover effect */
+    background: #005bb5; /* Darker Blue for hover effect */
 }
 
 /* Testimonials Section */
 .testimonials {
     padding: 40px 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .testimonials h2 {
@@ -336,52 +359,59 @@ header nav ul.nav-links li a:hover {
     justify-content: center;
 }
 
-.testimonials .testimonial {
-    background: #ffffff; /* White */
+.testimonials .testimonial-grid .testimonial {
+    background: #fff;
     border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonials .testimonial p {
-    font-size: 1.2em;
+.testimonials .testimonial-grid .testimonial p {
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
-.testimonials .testimonial span {
-    display: block;
+.testimonials .testimonial-grid .testimonial .author {
+    font-size: 0.9em;
     font-style: italic;
+    color: #666;
 }
 
 /* About Section */
 .about {
-    background: #B0D8E8; /* Light Blue */
+    background: linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%); /* Indigo to Blue Violet */
     padding: 40px 0;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .about h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-    background: #3A6D81; /* Teal Blue */
+    background: linear-gradient(90deg, #003366 0%, #004080 100%); /* Navy Blue to Dark Blue */
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
-/* Responsive Design */
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     header nav ul.nav-links {
         display: none;
@@ -392,54 +422,66 @@ footer {
     }
 
     header {
-        padding: 10px 20px;
+        justify-content: space-between;
     }
 
-    .dropdown-menu {
-        right: 0;
-        width: 100%;
-        top: 60px;
-    }
-
-    .dropdown-menu ul {
-        padding: 0;
-    }
-
-    .dropdown-menu ul li {
-        margin: 0;
+    /* Adjust layout for smaller screens */
+    .container {
+        width: 90%;
     }
 
     .hero h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .hero p {
         font-size: 1em;
     }
 
-    .hero .countdown p {
-        font-size: 1.2em;
-    }
-
     .introduction h2 {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
 
-    .introduction p {
-        font-size: 1em;
-    }
-
-    .what-is-it h2, .why-do-you-need-it h2, .who-is-this-for h2, .bonuses h2, .testimonials h2, .about h2 {
-        font-size: 1.4em;
-    }
-
-    .what-is-it p, .why-do-you-need-it p, .who-is-this-for p, .bonuses ul li, .testimonials .testimonial p, .about p {
-        font-size: 0.9em;
+    .what-is-it, .why-do-you-need-it, .who-is-this-for, .bonuses, .testimonials, .about {
+        padding: 20px 0;
     }
 }
 
-/* Logo Styling */
-header .logo img {
-    max-height: 50px; /* Adjust as needed */
-    width: auto;
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes sizeBlink {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
