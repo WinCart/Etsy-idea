@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #f0f4f8; /* Light Gray */
+    background-color: #F4F4F9; /* Light Gray Background */
 }
 
 /* Container */
@@ -21,10 +21,14 @@ body {
 
 /* Header */
 header {
-    background: #004d40; /* Teal Blue */
+    background: #3A6D81; /* Teal Blue */
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s ease;
 }
 
 header .logo {
@@ -33,33 +37,94 @@ header .logo {
 }
 
 header nav {
-    margin-top: 10px;
+    display: flex;
 }
 
-header nav ul {
+header nav ul.nav-links {
     list-style: none;
-    text-align: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin: 10px 20px;
+header nav ul.nav-links li {
+    margin-left: 20px;
 }
 
-header nav ul li a {
+header nav ul.nav-links li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul.nav-links li a:hover {
+    color: #B0D8E8; /* Light Blue on hover */
+}
+
+/* Menu Icon for Mobile View */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Dropdown Menu for Mobile View */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background-color: #3A6D81; /* Teal Blue */
+    width: 100%;
+    top: 60px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    margin: 0;
+}
+
+.dropdown-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #B0D8E8; /* Light Blue on hover */
+}
+
+/* Show the dropdown menu when toggled */
+.dropdown-menu.active {
+    display: block;
 }
 
 /* Hero Section */
 .hero {
-    background: #b2dfdb; /* Light Blue */
+    background: #1E4F63; /* Dark Teal Blue */
+    color: #fff;
     padding: 40px 0;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
@@ -72,32 +137,35 @@ header nav ul li a {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    flex-direction: column;
-    align-items: center;
 }
 
 .hero .countdown p {
-    margin: 10px 0;
+    margin: 0 10px;
     font-size: 1.5em;
 }
 
 .hero .cta-button {
-    background: #004d40; /* Teal Blue */
+    background: #F4B942; /* Warm Gold */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background: #E3A233; /* Slightly darker gold for hover effect */
 }
 
 /* Introduction Section */
 .introduction {
-    background: #e0f2f1; /* Light Blue */
+    background: #B0D8E8; /* Light Blue */
     padding: 40px 0;
     text-align: center;
 }
 
 .introduction h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
@@ -107,11 +175,16 @@ header nav ul li a {
 }
 
 .introduction .cta-button {
-    background: #004d40; /* Teal Blue */
+    background: #F4B942; /* Warm Gold */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.introduction .cta-button:hover {
+    background: #E3A233; /* Slightly darker gold for hover effect */
 }
 
 /* What Is It Section */
@@ -121,62 +194,62 @@ header nav ul li a {
 
 .what-is-it .image-text {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .what-is-it .image-text img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .what-is-it .text {
     text-align: center;
+    padding: 10px;
 }
 
 .what-is-it h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .what-is-it p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /* Why Do You Need It Section */
 .why-do-you-need-it {
-    background: #e0f2f1; /* Light Blue */
+    background: #B0D8E8; /* Light Blue */
     padding: 40px 0;
 }
 
 .why-do-you-need-it .image-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
 }
 
 .why-do-you-need-it .info-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .why-do-you-need-it .text {
     text-align: center;
+    padding: 10px;
 }
 
 .why-do-you-need-it h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .why-do-you-need-it p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /* Who Is This For Section */
@@ -186,34 +259,34 @@ header nav ul li a {
 
 .who-is-this-for .image-text {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .who-is-this-for .info-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .who-is-this-for .text {
     text-align: center;
+    padding: 10px;
 }
 
 .who-is-this-for h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .who-is-this-for p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /* Bonuses Section */
 .bonuses {
-    background: #b2dfdb; /* Light Blue */
+    background: #F4B942; /* Warm Gold */
     padding: 40px 0;
     text-align: center;
 }
@@ -229,16 +302,21 @@ header nav ul li a {
 }
 
 .bonuses ul li {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
 .bonuses .cta-button {
-    background: #004d40; /* Teal Blue */
+    background: #1E4F63; /* Dark Teal Blue */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bonuses .cta-button:hover {
+    background: #0F3B4C; /* Darker Teal Blue for hover effect */
 }
 
 /* Testimonials Section */
@@ -248,7 +326,7 @@ header nav ul li a {
 
 .testimonials h2 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
@@ -260,11 +338,12 @@ header nav ul li a {
 
 .testimonials .testimonial {
     background: #ffffff; /* White */
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
-    max-width: 100%;
+    max-width: 300px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials .testimonial p {
@@ -279,7 +358,7 @@ header nav ul li a {
 
 /* About Section */
 .about {
-    background: #e0f2f1; /* Light Blue */
+    background: #B0D8E8; /* Light Blue */
     padding: 40px 0;
     text-align: center;
 }
@@ -290,55 +369,44 @@ header nav ul li a {
 }
 
 .about p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    text-align: center;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /* Footer */
 footer {
-    background: #004d40; /* Teal Blue */
+    background: #3A6D81; /* Teal Blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-.footer-links {
-    margin-bottom: 20px;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.social-media {
-    margin-top: 10px;
-}
-
-.social-media a {
-    margin: 0 10px;
-}
-
-.social-media img {
-    width: 24px;
-    height: 24px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
+    header nav ul.nav-links {
+        display: none;
     }
 
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+    .menu-icon {
+        display: flex;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .dropdown-menu {
+        right: 0;
+        width: 100%;
+        top: 60px;
+    }
+
+    .dropdown-menu ul {
+        padding: 0;
+    }
+
+    .dropdown-menu ul li {
+        margin: 0;
     }
 
     .hero h1 {
@@ -349,13 +417,29 @@ footer {
         font-size: 1em;
     }
 
-    .introduction h2,
-    .what-is-it h2,
-    .why-do-you-need-it h2,
-    .who-is-this-for h2,
-    .bonuses h2,
-    .testimonials h2,
-    .about h2 {
+    .hero .countdown p {
+        font-size: 1.2em;
+    }
+
+    .introduction h2 {
         font-size: 1.6em;
     }
+
+    .introduction p {
+        font-size: 1em;
+    }
+
+    .what-is-it h2, .why-do-you-need-it h2, .who-is-this-for h2, .bonuses h2, .testimonials h2, .about h2 {
+        font-size: 1.4em;
+    }
+
+    .what-is-it p, .why-do-you-need-it p, .who-is-this-for p, .bonuses ul li, .testimonials .testimonial p, .about p {
+        font-size: 0.9em;
+    }
+}
+
+/* Logo Styling */
+header .logo img {
+    max-height: 50px; /* Adjust as needed */
+    width: auto;
 }
