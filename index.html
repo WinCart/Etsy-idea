@@ -217,11 +217,20 @@
         </div>
     </section>
 
-    <!-- Section 13: About -->
-    <section class="about" id="about">
+    <section class="reviews" id="reviews">
         <div class="container">
-            <h2>About Wincart</h2>
-            <p>Wincart is dedicated to helping small business owners find success with digital products. Our goal is to provide the resources and knowledge needed to launch, grow, and scale a profitable online store.</p>
+            <h2>Leave a Review</h2>
+            <form action="/" method="post" class="review-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="review">Your Review:</label>
+                    <textarea id="review" name="review" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
         </div>
     </section>
 
