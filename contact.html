@@ -3,44 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Wincart</title>
+    <title>Cancellation Policy - Wincart</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Example styles for dropdown and menu icon */
+        .menu-icon {
+            cursor: pointer;
+            display: none; /* Hide menu icon on large screens */
+        }
+
+        .dropdown-menu {
+            display: none; /* Hide dropdown menu by default */
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            top: 60px; /* Adjust based on your layout */
+            right: 0;
+            width: 200px;
+        }
+
+        .dropdown-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-menu ul li {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .dropdown-menu ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-menu ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block; /* Show menu icon on small screens */
+            }
+
+            nav {
+                display: none; /* Hide regular navigation menu on small screens */
+            }
+        }
+
+        /* Adjust page layout to center content between header and footer */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex-grow: 1;
+            padding-top: 80px; /* Adjusted to account for fixed header height */
+            padding-bottom: 40px; /* Footer space */
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">Wincart</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="refund.html">Refund Policy</a></li>
-                    <li><a href="cancellation.html">Cancellation Policy</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </nav>
+        <div class="logo">Wincart</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleDropdown()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </div>
     </header>
     <main class="container">
-        <h1>Contact Us</h1>
+        <h1>Cancellation Policy</h1>
         <section>
-            <h2>Get in Touch</h2>
-            <p>If you have any questions, concerns, or feedback, please reach out to us. We are here to assist you!</p>
+            <h2>Introduction</h2>
+            <p>Wincart offers digital products that are available immediately upon purchase. As such, cancellations are not possible once a transaction is completed.</p>
             
-            <h3>Email</h3>
-            <p>You can email us at <a href="mailto:support@wincart.com">support@wincart.com</a>. We aim to respond to all inquiries within 24 hours.</p>
+            <h2>No Cancellations</h2>
+            <p>Once a purchase is made, you cannot cancel the transaction or request a refund. Please ensure you review all product details before completing your purchase.</p>
             
-            <h3>Address</h3>
-            <p>Wincart, 123 Digital Avenue, Tech City, TX 78901</p>
+            <h2>Issues with Digital Products</h2>
+            <p>If you encounter issues with a digital product, please contact us for support. We will do our best to resolve any problems you may face.</p>
             
-            <h3>Social Media</h3>
-            <p>Follow us on social media:</p>
-            <div class="social-media">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            </div>
+            <h2>Contact Us</h2>
+            <p>For questions or assistance with your purchase, please contact us at <a href="mailto:support@wincart.com">support@wincart.com</a>.</p>
         </section>
     </main>
     <footer>
@@ -48,5 +129,16 @@
             <p>&copy; 2024 Wincart. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
