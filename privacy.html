@@ -7,16 +7,111 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <style>
+        /* Example styles for dropdown and menu icon */
+        .menu-icon {
+            cursor: pointer;
+            display: none; /* Hide menu icon on large screens */
+        }
+
+        .dropdown-menu {
+            display: none; /* Hide dropdown menu by default */
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            top: 60px; /* Adjust based on your layout */
+            right: 0;
+            width: 200px;
+        }
+
+        .dropdown-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-menu ul li {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .dropdown-menu ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-menu ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block; /* Show menu icon on small screens */
+            }
+
+            nav {
+                display: none; /* Hide regular navigation menu on small screens */
+            }
+        }
+
+        /* Adjust page layout to center content between header and footer */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex-grow: 1;
+            padding-top: 80px; /* Adjusted to account for fixed header height */
+            padding-bottom: 40px; /* Footer space */
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
     <header>
-        <div class="container">
-            <div class="logo">Wincart</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+        <div class="logo">Wincart</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="refund.html">Refund Policy</a></li>
+                <li><a href="cancellation.html">Cancellation Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleDropdown()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="refund.html">Refund Policy</a></li>
+                <li><a href="cancellation.html">Cancellation Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </div>
     </header>
     <main class="container">
@@ -49,5 +144,15 @@
             <p>&copy; 2024 Wincart. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
